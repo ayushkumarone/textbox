@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CodeBox</title>
+</head>
+<body>
+    <nav class="navigation" id="navigation">
+        <a href="/" style="text-decoration: none; background: rgba(0, 0, 0, 0);"><div class="logo">
+            CodeBox
+        </div></a>
+        <div class="userbtns">
+            <button class="userbtn" onclick="location.href='/';">Logout</button>
+            <!-- <button class="userbtn" onclick="location.href='/register';">Register</button> -->
+        </div>
+    </nav>
+    <div class="mainpart">
+        <div class="content">
+            <form class="paste" action="/" method="post">
+                <div class="codearea">
+                    <span>New Code</span>
+                    <textarea name="codePaste" rows="20" cols="20"></textarea>
+                </div>
+                <div class="ownername">
+                    Creator Name &nbsp; 
+                    <input type="text" name="ownerName" id="owner" class="textfield" autocomplete="off">
+                </div>
+                <div class="ownername">
+                    Topic &nbsp; 
+                    <input type="text" name="topicName" class="textfield topicfield" autocomplete="off">
+                </div>
+                <button type="submit" name="list" value="<%= listTitle %>" id="submitbtn">SUBMIT</button>
+            </form>
+        </div>
+        <div class="codeboxes">
+            <%Codeslist.forEach(function(paste){ %>
+                <div class="codebox">
+                    <form action="/delete" method="post">
+                        <div class="item"><a href="login/<%= paste.id %>" style="text-decoration: none;">
+                            <input type="checkbox" name="checkbox" value="<%=paste._id%>" onChange="this.form.submit()"><%= paste.topic %>
+                            <br><p style="font-size: 12px;"><%=paste.owner%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <%=(paste.date)%></p>
+                            </a>
+                          <!-- <p><%=paste.code%></p> -->
+                        </div>
+                      </form>
+                </div>
+            <%  }) %>
+        </div>
+    </div>
+    <div class="footer">
+        Made by CoolCoder. Copyright 2022
+    </div>
+</body>
+</html>

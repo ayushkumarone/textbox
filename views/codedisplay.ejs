@@ -1,0 +1,40 @@
+<%- include("header") -%>
+    <div class="mainpart">
+        <div class="content">
+            <form class="paste" action="/" method="post">
+                <div class="codearea">
+                    <span>New Code</span>
+                    <textarea name="codePaste" class="codePaste" rows="20" cols="20" placeholder="Enter the code"><%=code%></textarea>
+                </div>
+                <div class="ownername">
+                    Creator Name &nbsp;
+                    <textarea name="ownerName" rows="1" cols="20" id="owner" class="textfield" placeholder="Creator's name"><%=owner%></textarea>
+                </div>
+                <div class="ownername">
+                    Topic &nbsp;
+                    <textarea rows="1" cols="20" name="topicName" class="textfield topicfield" placeholder="Topic"><%=topic%></textarea> 
+                </div>
+            </form>
+        </div>
+        <div class="codeboxes">
+            <%  Codeslist.forEach(function(paste){ %>
+                <div class="codebox">
+                    <form action="/delete" method="post">
+                        <div class="item"><a href="/<%= paste.id %>" style="text-decoration: none;">
+                            <!-- <input type="checkbox" name="checkbox" value="<%=paste._id%>" onChange="this.form.submit()"> -->
+                            <%= paste.topic %>
+                            <br><p style="font-size: 12px;"><%=paste.owner%>
+                            <%=paste.date%></p>
+                            </a>
+                          <!-- <p><%=paste.code%></p> -->
+                        </div>
+                      </form>
+                </div>
+            <%  }) %>
+        </div>
+    </div>
+    <div class="footer">
+        Made by CoolCoder. Copyright 2022
+    </div>
+</body>
+</html>

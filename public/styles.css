@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
+*{
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+}
+button:hover {
+    background: aquamarine;
+}
+.navigation {
+    position: fixed;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 20px;
+    background-color: #080808;
+    margin: auto;
+    width: 100%;
+    z-index: 100;
+}
+.logo {
+    color: red;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Lobster Two', cursive;
+    font-size: 3rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.userbtn {
+    width: 80px;
+    height: 50px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.userbtns {
+    position: absolute;
+    width: 165px;
+    display: flex;
+    justify-content: space-between;
+    right: 100px;
+    background-color: #080808;
+}
+.footer {
+    position: fixed;
+    bottom: 1%;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0);
+    font-family: 'Lobster Two', cursive;
+}
+
+.mainpart{
+    display: flex;
+    flex-direction: row;
+    width: 93vw;
+    background: rgb(255, 255, 255);
+    margin-left: 2vw;
+}
+/* ---------------------------- EDITOR PART ---------------------------- */
+.content{
+    padding-top: 140px;
+    padding-left: 50px;
+    width: 70vw;
+}
+.codearea {
+    padding-top: 10px;
+    display: flex;
+    font-size: large;
+    flex-direction: column;
+    width: 60vw;  
+}
+.codePaste::-webkit-scrollbar {
+    width: 5px;
+}
+  
+  /* Track */
+.codePaste::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 20px;
+}
+  
+  /* Handle */
+.codePaste::-webkit-scrollbar-thumb {
+    background: rgb(114, 114, 114);
+    border-radius: 20px;
+}
+textarea {
+    resize: none;
+}
+.ownername {
+    margin-top: 15px;
+}
+.textfield {
+    border: 0.6px solid;
+    margin-left: 20px;
+    padding-right: 70px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.topicfield {
+    margin-left: 74px;
+}
+#submitbtn {
+    margin-top: 20px;
+    margin-left: 40vw;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+}
+/* ---------------------------- COPYING PART ---------------------------- */
+.codeboxes {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 140px;
+    margin-left: 70px;
+    padding-bottom: 10px;
+    /* max-height: 200px; */
+    height: 60vh;
+    width: 30vw;
+    font-size: large;
+    overflow-y: auto;
+}
+.codeboxes::-webkit-scrollbar {
+    width: 5px;
+}
+  
+  /* Track */
+.codeboxes::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 20px;
+}
+  
+  /* Handle */
+.codeboxes::-webkit-scrollbar-thumb {
+    background: rgb(114, 114, 114);
+    border-radius: 20px;
+}
+.codebox {
+    margin-top: 20px;
+    /* margin-left: 50px; */
+    color: rgb(3, 3, 3);
+    justify-content: center;
+    align-items: center;
+    width: 24vw;
+    min-height: 50px;
+    background: aliceblue;
+    overflow: hidden;
+    border-bottom: 2px solid;
+}
+.item {
+    height: 50px;
+}
+.codebox::-webkit-scrollbar{
+    width: 0;
+}
+
+
+
+#loginformat {
+    display: flex;
+    border: dotted;
+    margin-top: 30vh;
+}

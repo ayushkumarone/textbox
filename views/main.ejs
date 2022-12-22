@@ -1,0 +1,40 @@
+<%- include("header") -%>
+    <div class="mainpart">
+        <div class="content">
+            <form class="paste" action="/" method="post">
+                <div class="codearea">
+                    <span>New Code</span>
+                    <textarea name="codePaste" rows="20" cols="20"></textarea>
+                </div>
+                <div class="ownername">
+                    Creator Name &nbsp; 
+                    <input type="text" name="ownerName" id="owner" class="textfield" autocomplete="off">
+                </div>
+                <div class="ownername">
+                    Topic &nbsp; 
+                    <input type="text" name="topicName" class="textfield topicfield" autocomplete="off">
+                </div>
+                <button type="submit" name="list" value="<%= listTitle %>" id="submitbtn">SUBMIT</button>
+            </form>
+        </div>
+        <div class="codeboxes">
+            <%Codeslist.forEach(function(paste){ %>
+                <div class="codebox">
+                    <form action="/delete" method="post">
+                        <div class="item"><a href="/<%= paste.id %>" style="text-decoration: none;">
+                            <%= paste.topic %>
+                            <br><p style="font-size: 12px;"><%=paste.owner%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <%=(paste.date)%></p>
+                            </a>
+                          <!-- <p><%=paste.code%></p> -->
+                        </div>
+                      </form>
+                </div>
+            <%  }) %>
+        </div>
+    </div>
+    <div class="footer">
+        Made by CoolCoder. Copyright 2022
+    </div>
+</body>
+</html>
